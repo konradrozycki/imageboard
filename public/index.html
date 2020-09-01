@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+    <title>My Imageboard</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Randogram</h1>
+    </header>
+    <div class="wrapper">
+        <div id="main">
+            <form class='form'>
+                <input v-model='title' type='text' name='title' placeholder="title" autocomplete="off">
+                <input v-model='description' type='text' name='description' placeholder="description" autocomplete="off">
+                <input v-model='username' type='text' name='username' placeholder="username" autocomplete="off">
+                <input @change='handleChange' class='file' type='file' name='file' accept="image/*">
+                <button @click='handleClick' class="button">submit</button>
+            </form>
+
+
+            <div class="flex-container" v-if="images.length > 0">
+                <!-- remove the click event handler that toggles the modal-->
+                <div class="card" v-for="image in images">
+                    <a :href=" '#' + image.id" class="link">
+                        <div class="card-img" >
+                            <img :src="image.url" :id='image.id' v-bind:alt="image.description" class="image">
+                        </div>
+                        <div class="card-text">
+                            <p class="card-title">{{image.title}}</p>
+                        </div>
+                    </a>
+                </div> 
+            </div>
+            <image-modal v-if="imageId" v-bind:id="imageId" @close-from-modal='closeModal'></image-modal>
+        </div> <!--closes  id main vue app-->
+
+    <script id="img-modal" type="text/x-template">
+
+        <div class="modal" @click.self="sendCloseToParent">
+            <button class='close-button' @click='sendCloseToParent'>X</button>
+
+            <div class='modal-flex-container'>
+
+                <div class="modal-image-container">
+                    <img class='modal-image' :src= image.url />
+                    <div class="modal-img-info">
+                        <p class='modal-title'> {{ image.title }}</p>
+                        <p> {{ image.description }}</p>
+                        <p class='image-credits'> Image by: {{ image.username }} </p>
+                                            
+                    <form class='comment-form'>
+                        <input v-model='comment.comment' class='comment-input' type="text" value="Comment" placeholder='Add a comment'>
+                        <input v-model='comment.username' class='comment-input' type="text" placeholder='Your username'>
+                        <button class='comment-button' @click='postComment'>Add</button>
+                    </form>
+                    </div>
+                </div>
+
+                <div class="modal-comment-container">
+                    <div v-for='comment in comments'>
+                        <p class='username'> {{ comment.username }} say:</p>
+                        <div>
+                            <p class='comment'> {{ comment.comment }}</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+    </script>
+
+
+    </div>
+    <script src="/js/vue.js"></script>
+    <script src="/js/axios.min.js"></script>
+    <script src="/js/script.js"></script>
+</body>
+</html>
