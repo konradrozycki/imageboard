@@ -97,4 +97,6 @@ app.post("/comments/:id", (req, res) => {
         });
 });
 
-app.listen(8080, () => console.log("Id server is running"));
+app.listen(process.env.PORT || 8080, () =>
+    console.log("port 8080 is listening...")
+);
