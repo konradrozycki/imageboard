@@ -3,7 +3,7 @@
 const spicedPg = require("spiced-pg");
 const db = spicedPg(
     process.env.DATABASE_URL ||
-        "postgres:postgres:postgres@localhost:5432/imageboard"
+        "postgres:postgres:postgres@localhost:5432/caper-imageboard"
 );
 module.exports.getImages = () => {
     let q = `SELECT * FROM images ORDER BY images.id DESC LIMIT 9`;
