@@ -32,11 +32,12 @@ body {
 
 form {
     display: flex;
-    margin-top: 20px;
     align-items: baseline;
     align-content: center;
     flex-wrap: wrap;
     justify-content: left;
+    margin-top: 20px;
+    margin-left: 10px;
     padding-bottom: 20px;
 }
 
