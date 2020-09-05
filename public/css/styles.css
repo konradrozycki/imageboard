@@ -37,12 +37,12 @@ form {
     flex-wrap: wrap;
     justify-content: left;
     margin-top: 20px;
-    margin-left: 10px;
     padding-bottom: 20px;
 }
 
 form input[type="text"] {
     text-align: left;
+    margin: 10px;
 }
 
 .wrapper {
@@ -68,18 +68,21 @@ img {
     object-fit: contain;
 }
 
+element.style {
+    margin-left: 10px;
+}
+
 .file {
-    padding: 0.6rem 2rem;
-    margin-left: 5px;
-    margin-top: 15px;
+    margin-top: 12px;
+    margin-left: 10px;
 }
 
 .button {
     display: inline-block;
     border: none;
     padding: 0.6rem 2rem;
-    margin-left: 5px;
     margin-top: 15px;
+    margin-left: 10px;
     background: #0075c9;
     color: white;
     font-size: 1rem;
