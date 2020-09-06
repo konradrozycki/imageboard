@@ -88,10 +88,10 @@ element.style {
 
 .inputfile + label {
     font-size: 1.25em;
-    font-weight: 700;
+    padding: 0.6rem 2rem;
     cursor: pointer;
     color: white;
-    background-color: black;
+    background-color: #0075c9;
     display: inline-block;
 }
 
@@ -102,7 +102,7 @@ element.style {
 
 .inputfile:focus + label,
 .inputfile + label:hover {
-    background-color: red;
+    background-color: #aec6cf;
 }
 
 .button {
