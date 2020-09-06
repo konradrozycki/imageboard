@@ -88,7 +88,8 @@ element.style {
 
 .inputfile + label {
     font-size: 1rem;
-    padding: 0.56rem 1.4rem;
+    font: 400 13.3333px Arial;
+    padding: 0.69rem 1.4rem;
     cursor: pointer;
     color: white;
     background-color: #0075c9;
