@@ -77,6 +77,10 @@ element.style {
     margin-left: 10px;
 }
 
+svg {
+    margin-right: 10px;
+}
+
 .inputfile {
     width: 0.1px;
     height: 0.1px;
