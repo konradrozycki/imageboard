@@ -79,6 +79,7 @@ element.style {
 
 svg {
     margin-right: 10px;
+    fill: currentColor;
 }
 
 .inputfile {
