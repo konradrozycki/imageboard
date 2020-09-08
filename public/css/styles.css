@@ -92,15 +92,16 @@ svg {
 }
 
 .inputfile + label {
-    max-width: 80%;
-    font-size: 1.25rem;
+    max-width: 60%;
     font-weight: 700;
     text-overflow: ellipsis;
     white-space: nowrap;
     cursor: pointer;
     display: inline-block;
     overflow: hidden;
-    padding: 0.625rem 1.25rem;
+    border: 1px solid #0075c9;
+    color: #0075c9;
+    padding: 0;
 }
 
 .inputfile + label svg {
@@ -112,16 +113,6 @@ svg {
     margin-right: 0.25em;
 }
 
-.inputfile + label {
-    color: #0075c9;
-}
-
-.inputfile + label {
-    border: 1px solid #0075c9;
-    background-color: white;
-    padding: 0;
-}
-
 .inputfile:focus + label,
 .inputfile.has-focus + label,
 .inputfile + label:hover {
@@ -130,7 +121,7 @@ svg {
 
 .inputfile + label span,
 .inputfile + label strong {
-    padding: 0.625rem 1.25rem;
+    padding: 0.5rem 1.25rem;
 }
 
 .inputfile + label span {
