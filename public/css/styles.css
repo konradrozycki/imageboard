@@ -92,23 +92,110 @@ svg {
 }
 
 .inputfile + label {
-    font-size: 1rem;
-    font: 400 15.3333px Arial;
-    padding: 0.499rem 1.2rem;
+    max-width: 80%;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    padding: 0.625rem 1.25rem;
+}
+
+.inputfile + label svg {
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    fill: currentColor;
+    margin-top: -0.25em;
+    margin-right: 0.25em;
+}
+
+.inputfile + label {
+    color: #0075c9;
+}
+
+.inputfile + label {
+    border: 1px solid #0075c9;
+    background-color: white;
+    padding: 0;
+}
+
+.inputfile:focus + label,
+.inputfile.has-focus + label,
+.inputfile + label:hover {
+    border-color: #0066b0;
+}
+
+.inputfile + label span,
+.inputfile + label strong {
+    padding: 0.625rem 1.25rem;
+}
+
+.inputfile + label span {
+    width: 200px;
+    min-height: 2em;
+    display: inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    vertical-align: top;
+}
+
+.inputfile + label strong {
+    height: 100%;
     color: white;
     background-color: #0075c9;
     display: inline-block;
 }
 
-.inputfile:focus + label {
-    outline: 1px dotted #000;
-    outline: -webkit-focus-ring-color auto 5px;
+.inputfile:focus + label strong,
+.inputfile.has-focus + label strong,
+.inputfile + label:hover strong {
+    background-color: #6480a1;
 }
 
-.inputfile:focus + label,
-.inputfile + label:hover {
-    background-color: #aec6cf;
+@media screen and (max-width: 50em) {
+    .inputfile + label strong {
+        display: block;
+    }
+}
+
+*,
+*:after,
+*:before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.clearfix:before,
+.clearfix:after {
+    display: table;
+    content: "";
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+a {
+    outline: none;
+    color: #6480a1;
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    color: #6480a1;
+}
+
+.hidden {
+    position: absolute;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    pointer-events: none;
 }
 
 .button {
