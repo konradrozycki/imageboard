@@ -43,6 +43,9 @@ form {
 form input[type="text"] {
     text-align: left;
     margin: 10px;
+    padding: 9px;
+    border: 2px solid #0075c9;
+    font-size: inherit;
 }
 
 .wrapper {
@@ -99,8 +102,9 @@ svg {
     cursor: pointer;
     display: inline-block;
     overflow: hidden;
-    border: 1px solid #0075c9;
+    border: 2px solid #0075c9;
     color: #0075c9;
+    margin-left: 10px;
     padding: 0;
 }
 
@@ -116,7 +120,7 @@ svg {
 .inputfile:focus + label,
 .inputfile.has-focus + label,
 .inputfile + label:hover {
-    border-color: #0066b0;
+    border-color: #6480a1;
 }
 
 .inputfile + label span,
@@ -125,7 +129,7 @@ svg {
 }
 
 .inputfile + label span {
-    width: 200px;
+    width: 183px;
     min-height: 2em;
     display: inline-block;
     text-overflow: ellipsis;
