@@ -43,7 +43,7 @@ form {
 form input[type="text"] {
     text-align: left;
     margin: 10px;
-    padding: 9px;
+    padding: 3px;
     border: 2px solid #0075c9;
     font-size: inherit;
 }
