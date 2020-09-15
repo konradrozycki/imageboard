@@ -97,6 +97,7 @@ svg {
 .inputfile + label {
     max-width: 60%;
     font-weight: 700;
+    font-family: "Merriweather", serif;
     text-overflow: ellipsis;
     white-space: nowrap;
     cursor: pointer;
@@ -131,6 +132,7 @@ svg {
 .inputfile + label span {
     width: 183px;
     min-height: 2em;
+    color: grey;
     display: inline-block;
     text-overflow: ellipsis;
     white-space: nowrap;
