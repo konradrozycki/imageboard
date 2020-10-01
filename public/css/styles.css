@@ -208,21 +208,17 @@ a:focus {
     text-align: center;
     transition: background 250ms ease-in-out, transform 150ms ease;
 }
-
 .button:hover,
 .button:focus {
     background: #aec6cf;
 }
-
 .button:focus {
     outline: 1px solid #6480a1;
     outline-offset: -4px;
 }
-
 .button:active {
     transform: scale(0.99);
 }
-
 .flex-container {
     display: contents;
     width: 30%;
