@@ -292,18 +292,15 @@ a:focus {
     overflow: hidden;
     background-color: white;
 }
-
 .modal-comment-container {
     margin-top: 1rem;
     padding: 0.2rem 1rem;
     width: 40%;
 }
-
 .modal-title {
     font-size: 1.25rem;
     font-weight: bold;
 }
-
 .comment-form {
     margin-bottom: 1rem;
 }
